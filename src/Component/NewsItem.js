@@ -6,10 +6,10 @@ export class NewsItem extends Component {
     let { title, description, imageUrl, Newsurl } = this.props;
     return (
       <div>
-        <div className="card my-3">z
+        <div className="card my-3">
           <img
             className="card-img-top"
-            src={imageUrl}
+            src={!imageUrl?"https://st4.depositphotos.com/14431644/21781/i/450/depositphotos_217810498-stock-photo-handwriting-text-demo-concept-meaning.jpg": imageUrl}
             alt="Card image cap"
             width="286px"
             height="160px"
