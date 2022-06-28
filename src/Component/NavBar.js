@@ -5,7 +5,7 @@ export class NavBar extends Component {
       <div>
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
           <a className="navbar-brand" href="#">
-            News Headline
+            Navbar
           </a>
           <button
             className="navbar-toggler"
@@ -28,26 +28,26 @@ export class NavBar extends Component {
               </li>
            
               <li className="nav-item">
-                <a className="nav-link" href="/buisness">
-                  Buisness
+                <a className="nav-link" href="#">
+                  buisness
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/entertainment">
-                  Entertainment
+                <a className="nav-link" href="#">
+                  entertainment
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="general">
-                  General
+                <a className="nav-link" href="#">
+                  general
                 </a>
               </li>   <li className="nav-item">
-                <a className="nav-link" href="health">
-                  Health
+                <a className="nav-link" href="#">
+                  health
                 </a>
               </li>   <li className="nav-item">
-                <a className="nav-link" href="science">
-                  Science
+                <a className="nav-link" href="#">
+                  science
                 </a>
               </li>
             </ul>
