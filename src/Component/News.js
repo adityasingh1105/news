@@ -14,7 +14,7 @@ export class News extends Component {
     this.state = { articles: this.articles, loading: false, page: 1 };
   }
   async componentDidMount() {
-    let url = `https://newsapi.org/v2/top-headlines?country=in&category=${this.props.category}&apiKey=63f764b20b6942b19ffff6c8bf3a7857&pageSize=${this.props.pageSize}`;
+    let url = `https://newsapi.org/v2/top-headlines?country=in&category=${this.props.category}&apiKey=0231c69f97a3477aa7010a909256216d&pageSize=${this.props.pageSize}`;
     let data = await fetch(url);
     let parsedData = await data.json();
    
@@ -32,7 +32,7 @@ export class News extends Component {
     } else {
       let url = `https://newsapi.org/v2/top-headlines?country=in&category=${
         this.props.category
-      }&apiKey=63f764b20b6942b19ffff6c8bf3a7857&page=${
+      }&apiKey=0231c69f97a3477aa7010a909256216d&page=${
         this.state.page + 1
       }&pageSize=${this.props.pageSize}`;
       let data = await fetch(url);
@@ -46,17 +46,19 @@ export class News extends Component {
     }
   };
   handlePrevClick = async () => {
+    this.props.setProgress(10);
     let url = `https://newsapi.org/v2/top-headlines?country=in&category=${
       this.props.category
-    }&apiKey=63f764b20b6942b19ffff6c8bf3a7857&page=${
+    }&apiKey=0231c69f97a3477aa7010a909256216d&page=${
       this.state.page - 1
     }&pageSize=${this.props.pageSize}`;
     let data = await fetch(url);
+    this.props.setProgress(30)
     let parsedData = await data.json();
  
 
     this.setState({ page: this.state.page - 1, articles: parsedData.articles });
-  };
+    this.props.setProgress(100);};
   render() {
     return (
       <div className="container my-2">
@@ -73,7 +75,9 @@ export class News extends Component {
                   }
                   imageUrl={element.urlToImage}
                   Newsurl={element.url}
-                  publishedAt={element.publishedAt}
+                  date={element.publishedAt}
+                  Author={element.author}
+                  Source={element.source.name}
                 />
               </div>
             );
