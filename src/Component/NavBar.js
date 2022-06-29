@@ -18,7 +18,7 @@ export class NavBar extends Component {
             aria-label="Toggle navigation"
           >
             <span className="navbar-toggler-icon"></span>
-          </button>
+          </button> 
 
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mr-auto">
@@ -31,7 +31,17 @@ export class NavBar extends Component {
               <li className="nav-item"><Link className="nav-link"to="/technology">Technology</Link></li> 
               <li className="nav-item"><Link className="nav-link"to="/sports">Sports</Link></li> 
             </ul>
- 
+    
+            <img
+              src="https://lh3.googleusercontent.com/pw/AM-JKLUw3_g4F2uitj-zjbd1Sn1bXBx7boIWGivpBtcIm3hAAc7uiafEg5xHUFk2yjUHX2_7CIii0BunViQ0BE-h2FGv6hsw5RofCh64SXd0gdeA7xf1mm_HgfLkjSrRM5zPFWTt4hwwDXQgHmvTO6ZwTuXswQ=w697-h929-no?authuser=0"
+              className="rounded-circle"
+              height="30"
+              width="30"
+              
+              alt="Black and White Portrait of a Man"
+              loading="lazy"
+            />
+            
           </div>
         </nav>
       </div>
