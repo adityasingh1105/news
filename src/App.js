@@ -14,13 +14,14 @@ export default class App extends Component {
     return (
       <>
         <div>
- 
+
           <Router>
-            <Navbar /><LoadingBar
-            height={5}
-            color='#f11946'
-            progress={this.state.progress}
-          />
+            <Navbar />
+            <LoadingBar
+              height={5}
+              color='#f11946'
+              progress={this.state.progress}
+            />
 
             <Routes >
               <Route exact path="/" element={<News setProgress={this.setProgress} key="general" pageSize={12} country="in" category="general" />} />

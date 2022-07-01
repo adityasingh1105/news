@@ -4,7 +4,7 @@ export class NavBar extends Component {
   render() {
     return (
       <div>
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
           <Link className="navbar-brand"to="/#">
             News
           </Link  >
@@ -41,7 +41,6 @@ export class NavBar extends Component {
               alt="Black and White Portrait of a Man"
               loading="lazy"
             />
-            
           </div>
         </nav>
       </div>

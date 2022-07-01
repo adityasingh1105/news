@@ -14,7 +14,7 @@ export class NewsItem extends Component {
                 ? "https://st4.depositphotos.com/14431644/21781/i/450/depositphotos_217810498-stock-photo-handwriting-text-demo-concept-meaning.jpg"
                 : imageUrl
             }
-            alt=" image-xyz-1234"
+            alt={title}
             width="286px"
             height="160px"
           />
