@@ -1,0 +1,14 @@
+.weatherBox {
+  margin: auto;
+  width: 100px;
+  height: 100px;
+}
+.weatherIcon {  margin-top: 1rem;
+    margin-left: 2rem;
+  width: 30px;
+  height: 30px;
+  
+}
+.weatherTemp{
+    font-size: 10;
+}
