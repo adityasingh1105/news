@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import NewsItem from "./NewsItem";
+import Weather from "./Weather";
+
 export class News extends Component {
 
   articles = [];
@@ -58,8 +60,11 @@ export class News extends Component {
     this.setState({ page: this.state.page - 1, articles: parsedData.articles });
   };
   render() {
-    return (
-      <div className="container my-2">
+    return (<>
+    <div className="row">
+<div className="col-md-1 centre"> <Weather/></div>
+<div className=" col-md-10">     
+      <div className="container my-2">        
         <div className="row">
           {this.state.articles.map((element) => {
             return (
@@ -104,7 +109,9 @@ export class News extends Component {
             </button>
           </div>
         </div>
-      </div>
+      </div></div>
+      <div className="col-md-1"></div>
+    </div></>
     );
   }
 }
